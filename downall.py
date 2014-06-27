@@ -19,7 +19,7 @@ for i in range(1,404) + range(405, image_count+1):
         os.makedirs(dir_name)
     with open(os.path.join(dir_name,(i + ext)), 'wb') as f2:
         f2.write(urllib2.urlopen(soup.find_all(id="comic")[0].img['src']).read())
-    time.sleep(2)#I've used a timesleep of 2 seconds so that xkcd servers don't ban our ip.
+    time.sleep(3)#I've used a timesleep of 2 seconds so that xkcd servers don't ban our ip.
     #PS: You can comment this sleep function if you want to , cuz I've downloaded their whole directory but
     #still they didn't ban my IP. ;)
     print("Downloaded image no: "+ i)
